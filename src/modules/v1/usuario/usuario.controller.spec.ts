@@ -27,6 +27,36 @@ describe('UsuarioController', () => {
         .send({nome: "Nome de teste", email: "email@teste.com", senha: "123456"})
         .expect(201);
     });
+    it('should be status code 400', () => {
+      return request(app.getHttpServer())
+        .post('/v1/usuario')
+        .send({nome: "", email: "email@teste.com", senha: "123456"})
+        .expect(400);
+    });
+    it('should be status code 400', () => {
+      return request(app.getHttpServer())
+        .post('/v1/usuario')
+        .send({nome: "Nome de teste", email: "emai", senha: "123456"})
+        .expect(400);
+    });
+    it('should be status code 400', () => {
+      return request(app.getHttpServer())
+        .post('/v1/usuario')
+        .send({nome: "Nome de teste", email: "email@teste.com", senha: "12"})
+        .expect(400);
+    });
+    it('should be status code 400', () => {
+      return request(app.getHttpServer())
+        .post('/v1/usuario')
+        .send({nome: "Nome de teste", email: "email@teste.com", senha: ""})
+        .expect(400);
+    });
+    it('should be status code 400', () => {
+      return request(app.getHttpServer())
+        .post('/v1/usuario')
+        .send({nome: "Nome de teste", email: "email@teste.com", senha: "55555555555555"})
+        .expect(400);
+    });
   });
 
   it('should be defined', () => {
