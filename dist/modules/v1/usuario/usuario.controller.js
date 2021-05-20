@@ -30,11 +30,12 @@ let UsuarioController = class UsuarioController {
     findOne(id) {
         return this.usuarioService.findOne(+id);
     }
-    update(id, updateUsuarioDto) {
-        return this.usuarioService.update(+id, updateUsuarioDto);
+    edit(id, updateDto) {
+        this.usuarioService.update(+id, updateDto);
     }
-    remove(id) {
-        return this.usuarioService.remove(+id);
+    disable(id) {
+    }
+    enable(id) {
     }
 };
 __decorate([
@@ -59,19 +60,27 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], UsuarioController.prototype, "findOne", null);
 __decorate([
-    common_1.Patch(':id'),
+    common_1.Put(":id"),
+    common_1.UsePipes(new common_1.ValidationPipe()),
     __param(0, common_1.Param('id')), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, update_usuario_dto_1.UpdateUsuarioDto]),
     __metadata("design:returntype", void 0)
-], UsuarioController.prototype, "update", null);
+], UsuarioController.prototype, "edit", null);
 __decorate([
-    common_1.Delete(':id'),
+    common_1.Post("disable/:id"),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
-], UsuarioController.prototype, "remove", null);
+], UsuarioController.prototype, "disable", null);
+__decorate([
+    common_1.Post("enable/:id"),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], UsuarioController.prototype, "enable", null);
 UsuarioController = __decorate([
     common_1.Controller('v1/usuario'),
     __metadata("design:paramtypes", [usuario_service_1.UsuarioService])

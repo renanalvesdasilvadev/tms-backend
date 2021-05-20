@@ -1847,8 +1847,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/v1/usuario/dto/update-usuario.dto.ts": {
-        "version": "c070cea9a4859c0a1332106af7167d50464b56ba17baaefeb9e1fbc57db79906",
-        "signature": "d14ceb8a645104f9222a6ad018bd5919173cfdc4c31ec24ca9925952b1566ae3",
+        "version": "7202efca391d60d5d27b77a6438f3b7f894245d00478554c6a20d4ecfc00b670",
+        "signature": "6f9f41dc10640465b07ee2ed453d874a1a76428ee1fe56f080993f96c5675044",
         "affectsGlobalScope": false
       },
       "../src/modules/v1/usuario/usuario.service.ts": {
@@ -1857,8 +1857,8 @@
         "affectsGlobalScope": false
       },
       "../src/modules/v1/usuario/usuario.controller.ts": {
-        "version": "66802334ec9345adee210bb15fd64d358f066b43b638c94aa6a889e24d1ad8dd",
-        "signature": "0b5bbff63ea41763d215c8b4402c4bf23995a6f3231b480a955a182fb0466471",
+        "version": "b2c4993cdbde0b0c0d861637957ad3987a175e99b36946a8a72ee4fc90903e2c",
+        "signature": "cc3c1f3e3b87d9d3600aee818e46672de0afffec561f6a7a42f60c85779cf135",
         "affectsGlobalScope": false
       },
       "../src/modules/v1/usuario/usuario.module.ts": {
@@ -4290,6 +4290,7 @@
       ],
       "../src/modules/v1/usuario/dto/update-usuario.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
         "../src/modules/v1/usuario/dto/create-usuario.dto.ts"
       ],
       "../src/modules/v1/usuario/usuario.controller.ts": [

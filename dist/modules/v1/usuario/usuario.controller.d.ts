@@ -7,6 +7,7 @@ export declare class UsuarioController {
     create(createUsuarioDto: CreateUsuarioDto): string;
     findAll(): string;
     findOne(id: string): string;
-    update(id: string, updateUsuarioDto: UpdateUsuarioDto): string;
-    remove(id: string): string;
+    edit(id: string, updateDto: UpdateUsuarioDto): void;
+    disable(id: string): void;
+    enable(id: string): void;
 }
